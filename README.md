@@ -18,3 +18,13 @@ Then install bundle and required gems
 
     gem install bundler
     bundle install
+
+## Usage
+
+Running witout arguments will generate all flags defined in lib/flags.yml
+
+    bundle exec flags
+
+You can generate specific flags like so :
+
+    bundle exec flags -l fr,de,es
