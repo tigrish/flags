@@ -25,6 +25,8 @@ module Flags
     end
 
     def cache!
+      FileUtils.mkdir_p(File.join(@root_dir, 'source'))
+      FileUtils.mkdir_p(File.join(@root_dir, 'output'))
       return if File.exist?(@source_filepath)
       img = open(@source_filepath, "wb")
       img.write(open(@url).read)
