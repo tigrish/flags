@@ -10,7 +10,8 @@ module Flags
       @filepath        = File.join(@root_dir, "output", "#{@locale}.png")
       @width           = 18
       @height          = 12
-      @radius          = 3
+      @radius          = 2
+      @stroke          = 1
     end
 
     def process!
@@ -19,8 +20,8 @@ module Flags
       puts '-- cacheing';     cache!
       puts '-- converting';   convert!
       puts '-- rounding';     round!
-      puts '-- strokeing';    stroke!
       puts '-- highlighting'; highlight!
+      puts '-- strokeing';    stroke!
     end
 
     def cache!
@@ -48,29 +49,24 @@ module Flags
       img.write(@filepath)
     end
 
-    def stroke!
-      # img  = Magick::Image.read(out_filename).first
-      # stroke = Magick::Image.new(width, height) { self.background_color = 'transparent' }
-      # Draw.new.stroke('#000').
-      #   stroke_width(1).
-      #   stroke_opacity('50%').
-      #   fill_opacity('0%').
-      #   roundrectangle(0, 0, width-1, height-1, radius, radius).
-      #   draw(stroke)
-      # stroke.composite!(img, 0, 0, Magick::CopyOpacityCompositeOp)
-      # stroke.write(out_filename)
+    def highlight!
+      img = Magick::Image.read(@filepath).first
+      Magick::Draw.new.fill('#fff').
+        fill_opacity('50%').
+        roundrectangle(@stroke*2, @stroke*2, @width-@stroke*2-1, @height/2, @radius, @radius).
+        draw(img)
+      img.write(@filepath)
     end
 
-    def highlight!
-      # img  = Magick::Image.read(@filename).first
-      # highlight = Magick::Image.new(@width, @height) { self.background_color = 'transparent' }
-      # Magick::Draw.new.stroke('#000').
-      #   stroke_width(1).
-      #   fill_opacity('70%').
-      #   roundrectangle(0, 0, width-1, height-1, radius, radius).
-      #   draw(stroke)
-      # img.composite!(highlight, 0, 0, Magick::CopyOpacityCompositeOp)
-      # img.write(@filename)
+    def stroke!
+      img = Magick::Image.read(@filepath).first
+      Magick::Draw.new.stroke('#000').
+        stroke_width(1).
+        stroke_opacity('30%').
+        fill_opacity('0%').
+        roundrectangle(0, 0, @width-1, @height-1, @radius, @radius).
+        draw(img)
+      img.write(@filepath)
     end
   end
 end
