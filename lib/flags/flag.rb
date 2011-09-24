@@ -1,6 +1,6 @@
 module Flags
   class Flag
-    # include ::Magick
+    attr_writer :width, :height
 
     def initialize(locale, url)
       @locale          = locale
@@ -15,12 +15,12 @@ module Flags
 
     def process!
       puts '-'*80
-      puts '- ' << @locale
-      puts '-- cacheing';   cache!
-      puts '-- converting'; convert!
-      puts '-- rounding';   round!
-      puts '-- strokeing';  stroke!
-      puts '-- highlighting'; # highlight!
+      puts "- #{@locale}, #{@width}x#{@height}"
+      puts '-- cacheing';     cache!
+      puts '-- converting';   convert!
+      puts '-- rounding';     round!
+      puts '-- strokeing';    stroke!
+      puts '-- highlighting'; highlight!
     end
 
     def cache!
@@ -62,15 +62,15 @@ module Flags
     end
 
     def highlight!
-      img  = Magick::Image.read(@filename).first
-      highlight = Magick::Image.new(width, height) { self.background_color = 'transparent' }
-      Magick::Draw.new.stroke('#000').
-        stroke_width(1).
-        fill_opacity('70%').
-        roundrectangle(0, 0, width-1, height-1, radius, radius).
-        draw(stroke)
-      img.composite!(highlight, 0, 0, Magick::CopyOpacityCompositeOp)
-      img.write(@filename)
+      # img  = Magick::Image.read(@filename).first
+      # highlight = Magick::Image.new(@width, @height) { self.background_color = 'transparent' }
+      # Magick::Draw.new.stroke('#000').
+      #   stroke_width(1).
+      #   fill_opacity('70%').
+      #   roundrectangle(0, 0, width-1, height-1, radius, radius).
+      #   draw(stroke)
+      # img.composite!(highlight, 0, 0, Magick::CopyOpacityCompositeOp)
+      # img.write(@filename)
     end
   end
 end

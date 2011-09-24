@@ -7,6 +7,8 @@ require 'flags'
 
 opts = Slop.parse do
   on :l, :locale, 'Comma separated list of locale codes that you want to procoess', true, :optional => true, :as => Array
+  on :w, :width,  'The pixel width to generate', true, :optional => true
+  on :h, :height,  'The pixel height to generate', true, :optional => true
 end
 
 begin
@@ -16,6 +18,8 @@ begin
   locales = locales.select { |locale, url| opts[:locale].include?(locale) } if opts.locale?
   locales.each do |locale, url|
     flag = Flags::Flag.new(locale, url)
+    flag.width = opts[:width].to_i if opts.width?
+    flag.height = opts[:height].to_i if opts.height?
     flag.process!
   end
 rescue Slop::InvalidOptionError
