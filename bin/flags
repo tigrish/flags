@@ -2,48 +2,22 @@
 $LOAD_PATH.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
 
 require 'slop'
+require 'yaml'
 require 'flags'
 
-slop = Slop.new(ARGV, :help => true, :strict => true) do
-  banner "Usage: localeapp COMMAND [options]"
-  description <<-COMMANDS
-    COMMAND:
-    install <api_key> - Creates new configuration files and confirms key works
-    pull              - Pulls all translations from localeapp.com
-    push <file>       - Pushes a translation file to localeapp.com
-    update            - Gets any changes since the last poll and updates the yml
-    daemon            - Simple daemon (checks every 5 seconds for new translations)
-COMMANDS
-end
-
-slop.command :install do
-  execute do |opts, args|
-    key = args.first
-    installer = Localeapp::CLI::Install.new
-    if installer.execute(key)
-      exit 0
-    else
-      exit 1
-    end
-  end
-end
-
-slop.command :pull do
-  execute do |opts, args|
-    include_config_file
-    Localeapp::CLI::Pull.new.execute
-  end
-end
-
-slop.command :update do
-  execute do |opts, args|
-    include_config_file
-    Localeapp::CLI::Update.new.execute
-  end
+opts = Slop.parse do
+  on :l, :locale, 'Comma separated list of locale codes that you want to procoess', true, :optional => true, :as => Array
 end
 
 begin
-  slop.parse
+  opts.parse
+
+  locales = YAML.load_file('lib/flags.yml')
+  locales = locales.select { |locale, url| opts[:locale].include?(locale) } if opts.locale?
+  locales.each do |locale, url|
+    flag = Flags::Flag.new(locale, url)
+    flag.process!
+  end
 rescue Slop::InvalidOptionError
-  puts slop
+  puts opts
 end

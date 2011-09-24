@@ -2,5 +2,6 @@
 .bundle
 Gemfile.lock
 pkg/*
-cache/*
+source/*
 output/*
+.DS_Store
