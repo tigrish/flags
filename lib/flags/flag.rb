@@ -55,7 +55,7 @@ module Flags
       img = Magick::Image.read(@filepath).first
       Magick::Draw.new.fill('#fff').
         fill_opacity('50%').
-        roundrectangle(@stroke*2, @stroke*2, @width-@stroke*2-1, @height/2, @radius, @radius).
+        roundrectangle(@stroke, @stroke, @width-@stroke-1, @height/2, @radius, @radius).
         draw(img)
       img.write(@filepath)
     end
