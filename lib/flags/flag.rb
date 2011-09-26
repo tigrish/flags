@@ -1,6 +1,6 @@
 module Flags
   class Flag
-    attr_writer :width, :height
+    attr_writer :width, :height, :stroke, :radius
 
     def initialize(locale, url)
       @locale          = locale
@@ -19,9 +19,9 @@ module Flags
       puts "- #{@locale}, #{@width}x#{@height}"
       puts '-- cacheing';     cache!
       puts '-- converting';   convert!
-      puts '-- rounding';     round!
       puts '-- highlighting'; highlight!
       puts '-- strokeing';    stroke!
+      puts '-- rounding';     round!
     end
 
     def cache!
@@ -55,7 +55,7 @@ module Flags
       img = Magick::Image.read(@filepath).first
       Magick::Draw.new.fill('#fff').
         fill_opacity('50%').
-        roundrectangle(@stroke, @stroke, @width-@stroke-1, @height/2, @radius, @radius).
+        roundrectangle(0, 0, @width, @height/2, @radius, @radius).
         draw(img)
       img.write(@filepath)
     end
@@ -63,8 +63,8 @@ module Flags
     def stroke!
       img = Magick::Image.read(@filepath).first
       Magick::Draw.new.stroke('#000').
-        stroke_width(1).
-        stroke_opacity('30%').
+        stroke_width(@stroke).
+        stroke_opacity('60%').
         fill_opacity('0%').
         roundrectangle(0, 0, @width-1, @height-1, @radius, @radius).
         draw(img)
