@@ -8,6 +8,7 @@ pt: &pt  'http://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.sv
 sr: &sr  'http://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg'
 
 ar:      'http://upload.wikimedia.org/wikipedia/commons/2/2b/Flag_of_the_Arab_League.svg'
+az:      'http://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg'
 bg:      'http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg'
 bn-IN:   'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
 bs:      'http://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg'
