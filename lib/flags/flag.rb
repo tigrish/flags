@@ -8,9 +8,9 @@ module Flags
       @root_dir        = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
       @source_filepath = File.join(@root_dir, "source", "#{@locale}.svg")
       @filepath        = File.join(@root_dir, "output", "#{@locale}.png")
-      @width           = 18
-      @height          = 12
-      @radius          = 2
+      @width           = 24
+      @height          = 16
+      @radius          = 1
       @stroke          = 1
     end
 
@@ -64,7 +64,7 @@ module Flags
       img = Magick::Image.read(@filepath).first
       Magick::Draw.new.stroke('#000').
         stroke_width(@stroke).
-        stroke_opacity('60%').
+        stroke_opacity('15%').
         fill_opacity('0%').
         roundrectangle(0, 0, @width-1, @height-1, @radius, @radius).
         draw(img)
