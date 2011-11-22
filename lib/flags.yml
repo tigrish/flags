@@ -1,7 +1,6 @@
 ch: &ch  'http://www.flagpictures.org/downloads/print/switzerland1.svg'
 de: &de  'http://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg'
 en: &en  'http://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg' 
-it: &it  'http://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg'
 hi: &hi  'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
 nb: &nb  'http://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg'
 pt: &pt  'http://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg'
@@ -36,8 +35,7 @@ fa:      'http://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg'
 fi:      'http://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg'
 fr:      'http://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg'
 fr-CA:   'http://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg'
-fr-CH:   *ch
-fur:     *it
+fur:     'http://upload.wikimedia.org/wikipedia/commons/e/eb/Friuli_Flag.svg'
 gl-ES:   'http://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Galicia.svg'
 gsw-CH:  *ch
 he:      'http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg'
@@ -47,6 +45,7 @@ hsb:     *de
 hu:      'http://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg'
 id:      'http://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg'
 is:      'http://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg'
+it:      'http://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg'
 ja:      'http://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg'
 kn:      'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
 ko:      'http://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg'
