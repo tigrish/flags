@@ -1,6 +1,6 @@
 module Flags
   class Flag
-    attr_writer :width, :height, :stroke, :radius
+    attr_writer :width, :height, :stroke, :radius, :force
 
     def initialize(locale, url)
       @locale          = locale
@@ -12,6 +12,7 @@ module Flags
       @height          = 16
       @radius          = 1
       @stroke          = 1
+      @force           = false
     end
 
     def process!
@@ -27,7 +28,7 @@ module Flags
     def cache!
       FileUtils.mkdir_p(File.join(@root_dir, 'source'))
       FileUtils.mkdir_p(File.join(@root_dir, 'output'))
-      return if File.exist?(@source_filepath)
+      return if File.exist?(@source_filepath) && !@force
       img = open(@source_filepath, "wb")
       img.write(open(@url).read)
       img.close

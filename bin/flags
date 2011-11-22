@@ -11,6 +11,7 @@ opts = Slop.parse do
   on :h, :height,  'The pixel height to generate', true, :optional => true
   on :s, :stroke,  'The pixel width of the border', true, :optional => true
   on :r, :radius,  'The pixel radius of the rounded corners', true, :optional => true
+  on :f, :force,   'Forces the source file to be downloaded', false, :optional => true
 end
 
 begin
@@ -24,6 +25,7 @@ begin
     flag.height = opts[:height].to_i if opts.height?
     flag.stroke = opts[:stroke].to_i if opts.stroke?
     flag.radius = opts[:radius].to_i if opts.radius?
+    flag.force  = true if opts.force?
     flag.process!
   end
 rescue Slop::InvalidOptionError
