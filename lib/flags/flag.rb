@@ -35,9 +35,7 @@ module Flags
     end
 
     def convert!
-      img = Magick::Image.read(@source_filepath).first
-      img.crop_resized!(@width, @height, Magick::CenterGravity)
-      img.write(@filepath)
+      `rsvg -w #{@width} -h #{@height} #{@source_filepath} #{@filepath}`
     end
 
     def round!

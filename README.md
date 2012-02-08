@@ -4,17 +4,15 @@ Creates PNG thumbnails for different locales
 
 ## Installation
 
- Imagemagick needs to be installed with rsvg, otherwise conversions from SVG are borked.
+Librsvg is used to convert the svg files to png. It must be installed and `rsvg` must be in your path :
 
- If you're unsure, first run
+    brew install librsvg
 
-    brew remove imagemagick
+Imagemagick is used to add borders and effects :
 
-Then install imagemagick
+    brew install imagemagick
 
-    brew install cairo librsvg imagemagick
-
-Then install bundle and required gems
+Then install bundler and required gems
 
     gem install bundler
     bundle install
