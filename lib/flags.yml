@@ -22,6 +22,7 @@ dsb:     *de
 el:      'http://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg'
 en-AU:   'http://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg'
 en-GB:   *en
+en-IN:   *hi
 en-US:   'http://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'
 eo:      'http://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_Esperanto.svg'
 es:      'http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg'
@@ -55,6 +56,7 @@ lt:      'http://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.s
 lv:      'http://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg'
 mk:      'http://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Macedonia.svg'
 mn:      'http://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg'
+my:      'http://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg'
 nl:      'http://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg'
 nn:      *nb
 pl:      'http://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg'
