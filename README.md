@@ -4,7 +4,7 @@ Creates PNG thumbnails for different locales
 
 ## Installation
 
-Librsvg is used to convert the svg files to png. It must be installed and `rsvg` must be in your path :
+Librsvg is used to convert the svg files to png. It must be installed and `rsvg-convert` must be in your path :
 
     brew install librsvg
 

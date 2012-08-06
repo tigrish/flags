@@ -35,7 +35,7 @@ module Flags
     end
 
     def convert!
-      `rsvg -w #{@width} -h #{@height} #{@source_filepath} #{@filepath}`
+      `rsvg-convert -w #{@width} -h #{@height} #{@source_filepath} > #{@filepath}`
     end
 
     def round!
