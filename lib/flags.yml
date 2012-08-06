@@ -1,7 +1,10 @@
+be: &be  'http://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Belgium_%28civil%29.svg'
 ch: &ch  'http://www.flagpictures.org/downloads/print/switzerland1.svg'
 de: &de  'http://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg'
-en: &en  'http://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg' 
+en: &en  'http://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'
 hi: &hi  'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
+hk: &hk  'http://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg'
+my: &my  'http://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg'
 nb: &nb  'http://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg'
 pt: &pt  'http://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg'
 sr: &sr  'http://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg'
@@ -21,9 +24,18 @@ de-CH:   *ch
 dsb:     *de
 el:      'http://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg'
 en-AU:   'http://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg'
-en-GB:   *en
+en-CA:   'http://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg'
+en-CH:   *ch
+en-GB:   'http://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg' 
+en-HK:   *hk
+en-IE:   'http://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg'
 en-IN:   *hi
-en-US:   'http://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'
+en-MY:   *my
+en-NZ:   'http://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg'
+en-PH:   'http://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg'
+en-SG:   'http://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg'
+en-US:   *en
+en-ZA:   'http://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg'
 eo:      'http://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_Esperanto.svg'
 es:      'http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg'
 es-AR:   'http://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg'
@@ -36,6 +48,8 @@ eu:      'http://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_the_Basque_
 fa:      'http://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg'
 fi:      'http://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg'
 fr:      'http://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg'
+fr-BE:   *be
+fr-CH:   *ch
 fr-CA:   'http://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg'
 fur:     'http://upload.wikimedia.org/wikipedia/commons/e/eb/Friuli_Flag.svg'
 gl-ES:   'http://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Galicia.svg'
@@ -56,8 +70,8 @@ lt:      'http://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.s
 lv:      'http://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg'
 mk:      'http://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Macedonia.svg'
 mn:      'http://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg'
-my:      'http://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg'
 nl:      'http://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg'
+nl-BE:   *be
 nn:      *nb
 pl:      'http://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg'
 pt-PT:   *pt
@@ -75,18 +89,6 @@ tr:      'http://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg'
 uk:      'http://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg'
 vi:      'http://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg'
 zh-CN:   'http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg'
+zh-HK:   *hk
+zh-MY:   *my
 zh-TW:   'http://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg'
-
-# hybrids
-# de-Ch:
-#   - *de
-#   - *ch
-# fr-CA:
-#   - *fr
-#   - *ca
-# fr-CH:
-#   - *fr
-#   - *ch
-# gsw-CH:
-#   - *de
-#   - *ch
