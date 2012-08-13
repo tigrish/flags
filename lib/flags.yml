@@ -1,8 +1,28 @@
+# ISO 3166-1 alpha-2
+
+BD: &BD 'http://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg'
+IN: &IN 'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
+LK: &LK 'http://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg'
+NP: &NP 'http://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg'
+PK: &PK 'http://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg'
+
+# ISO 639-1
+
+bn: *BD
+ne: *NP
+si: *LK
+ta: *IN
+ur: *PK
+
+#
+#
+# TODO: The following mix of languages and locales
+#
+#
 be: &be  'http://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Belgium_%28civil%29.svg'
 ch: &ch  'http://www.flagpictures.org/downloads/print/switzerland1.svg'
 de: &de  'http://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg'
 en: &en  'http://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'
-hi: &hi  'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
 hk: &hk  'http://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg'
 my: &my  'http://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg'
 nb: &nb  'http://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg'
@@ -12,7 +32,7 @@ sr: &sr  'http://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg'
 ar:      'http://upload.wikimedia.org/wikipedia/commons/2/2b/Flag_of_the_Arab_League.svg'
 az:      'http://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg'
 bg:      'http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg'
-bn-IN:   'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
+bn-IN:   *IN
 bs:      'http://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg'
 ca:      'http://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg'
 cs:      'http://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg'
@@ -30,7 +50,7 @@ en-CH:   *ch
 en-GB:   'http://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg' 
 en-HK:   *hk
 en-IE:   'http://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg'
-en-IN:   *hi
+en-IN:   *IN
 en-MY:   *my
 en-NZ:   'http://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg'
 en-PH:   'http://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg'
@@ -56,7 +76,8 @@ fur:     'http://upload.wikimedia.org/wikipedia/commons/e/eb/Friuli_Flag.svg'
 gl-ES:   'http://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Galicia.svg'
 gsw-CH:  *ch
 he:      'http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg'
-hi-IN:   *hi
+hi:      *IN
+hi-IN:   *IN
 hr:      'http://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg'
 hsb:     *de
 hu:      'http://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg'
@@ -64,7 +85,7 @@ id:      'http://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.s
 is:      'http://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg'
 it:      'http://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg'
 ja:      'http://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg'
-kn:      'http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg'
+kn:      *IN
 ko:      'http://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg'
 lo:      'http://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg'
 lt:      'http://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg'
@@ -93,3 +114,5 @@ zh-CN:   'http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%
 zh-HK:   *hk
 zh-MY:   *my
 zh-TW:   'http://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg'
+
+
