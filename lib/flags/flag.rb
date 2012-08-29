@@ -2,12 +2,12 @@ module Flags
   class Flag
     attr_writer :width, :height, :stroke, :radius, :force
 
-    def initialize(locale, url)
-      @locale          = locale
+    def initialize(code, url)
+      @code          = code
       @url             = url
       @root_dir        = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
-      @source_filepath = File.join(@root_dir, "source", "#{@locale}.svg")
-      @filepath        = File.join(@root_dir, "output", "#{@locale}.png")
+      @source_filepath = File.join(@root_dir, "source", "#{@code}.svg")
+      @filepath        = File.join(@root_dir, "output", "#{@code}.png")
       @width           = 24
       @height          = 16
       @radius          = 1
@@ -17,7 +17,7 @@ module Flags
 
     def process!
       puts '-'*80
-      puts "- #{@locale}, #{@width}x#{@height}"
+      puts "- #{@code}, #{@width}x#{@height}"
       puts '-- cacheing';     cache!
       puts '-- converting';   convert!
       puts '-- highlighting'; highlight!

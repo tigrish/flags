@@ -17,7 +17,7 @@ end
 begin
   opts.parse
 
-  locales = YAML.load_file('lib/flags.yml')
+  locales = YAML.load_file('data/iso-3166-1.yml')
   locales = locales.select { |locale, url| opts[:locale].include?(locale) } if opts.locale?
   locales.each do |locale, url|
     flag = Flags::Flag.new(locale, url)
