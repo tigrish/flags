@@ -30,8 +30,14 @@ module Flags
       FileUtils.mkdir_p(File.join(@root_dir, 'output'))
       return if File.exist?(@source_filepath) && !@force
       img = open(@source_filepath, "wb")
-      img.write(open(@url).read)
-      img.close
+
+      begin
+        img.write(open(@url).read)
+        img.close
+      rescue Exception => e
+        File.unlink(img)
+        raise e
+      end
     end
 
     def convert!
